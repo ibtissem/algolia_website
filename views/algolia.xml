@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="ip_algolia_page" name="Test page">
+        <t t-call="website.layout">
+            <head>
+              <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css"/>
+              <link rel="stylesheet" type="text/css" href="/ip_website_algolia/static/src/css/algolia.css"/>
+            </head>
+            <body>
+            <div class="row">
+              <header >
+               
+                <div class="col-md-4 col-md-offset-5">
+                   <input id="search-input" placeholder="Search for products"/>
+                   <!-- We use a specific placeholder in the input to guides users in their search. -->
+                </div>
+                
+              </header>
+              </div>
+              <div class="row">
+              <main>
+                  <div id="hits"></div>
+                  <div id="pagination"></div>
+              </main>
+              </div>
+              <!-- <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+              <script src="algolia.js"></script> -->
+            </body>
+            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"></script>
+            <script src="/ip_website_algolia/static/src/js/instantsearch.min.js"/>
+            <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
+                  <script src="/ip_website_algolia/static/src/js/algolia.js"/>
+                  <!-- <script type="text/html" id="hit-template">
+                      <div class="hit">
+                        <div class="hit-image">
+                          <img src="{{image}}" alt="{{name}}" />
+                        </div>
+                        <div class="hit-content">
+                          <h3 class="hit-price">${{price}}</h3>
+                          <h2 class="hit-name">{{{_highlightResult.name.value}}}</h2>
+                          <p class="hit-description">{{{_highlightResult.description.value}}}</p>
+                        </div>
+                      </div>
+                    </script> -->
+        </t>
+    </template>
+             
+    </data>
+</openerp> 

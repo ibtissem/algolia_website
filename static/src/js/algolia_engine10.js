@@ -1,18 +1,17 @@
 var search = instantsearch({
   // Replace with your own values
-  appId: '7AVE2BUKJR',
-  apiKey: 'f4ca8b111c20744362bfa3782cbb581e', // search only API key, no ADMIN key
-  indexName: 'bloopark',
+  appId: $(".api_algolia").text(),
+  apiKey: $(".client_id_algolia").text(), // search only API key, no ADMIN key
+  indexName: $(".index_algolia").text(),
   urlSync: true
 });
 var search2 = instantsearch({
   // Replace with your own values
-  appId: '7AVE2BUKJR',
-  apiKey: 'f4ca8b111c20744362bfa3782cbb581e', // OK bb
-  indexName: 'bloopark',
+  appId: $(".api_algolia").text(),
+  apiKey: $(".client_id_algolia").text(),  
+  indexName: $(".index_algolia").text(),
   urlSync: true
 });
-
  var hitTemplate2 = '<article class="hit">' + 
       '<div class="product-desc-wrapper">' +
       '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"> </div>' +
@@ -82,11 +81,11 @@ search2.addWidget(
 search.start();
 search2.start();
     
- $('#search_header').keyup(function(){
+ $('#search-input').keyup(function(){
 //         $(".categ").parent(".ais-hits--item").addClass("categorie");
          $(".main_algolia").css("display","block");
          });
-//  $('#search_header').focusout(function(){
+//  $('#search-input').focusout(function(){
 //          $(".main_algolia").css("display","none");
 //          });
 

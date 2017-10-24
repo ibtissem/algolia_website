@@ -28,4 +28,4 @@ class ExtensionAlgolia(website_account):
     @http.route('/algolia', type='http', auth='public', website=True)
     def affichage_algolia(self,*args,**kw):
         cr, uid, context, pool = request.cr, request.uid, request.context, request.registry 
-        return request.render('ip_website_algolia.ip_algolia_page')
+        return request.render('algolia_website.ip_algolia_page')

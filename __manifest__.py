@@ -20,10 +20,10 @@
 #
 ##############################################################################
 {
-    'name': 'Algolia connector', 
-    'icon': "ip_algolia/static/description/algolia.png",  
+    'name': 'Algolia connector website', 
+    'icon': "algolia_website/static/description/algolia.png",  
     'description': """
-Incontinence Protection algolia website
+algolia website
 ====================================
     """, 
     'category': 'tools',

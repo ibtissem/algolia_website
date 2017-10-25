@@ -23,8 +23,8 @@
     'name': 'Algolia connector website', 
     'icon': "algolia_website/static/description/algolia.png",  
     'description': """
-algolia website
-====================================
+    algolia website add the search interface algolia inder the search input
+    ====================================
     """, 
     'category': 'tools',
     'version' : '8.0.1',

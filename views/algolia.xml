@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+    <!-- template of the serach template connected to algolia  -->
         <template id="ip_algolia_page" name="Test page">
-        <t t-call="website.layout">
             <head>
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css"/>
-              <link rel="stylesheet" type="text/css" href="/algolia_website/static/src/css/algolia3.css"/>
+              <link rel="stylesheet" type="text/css" href="/algolia_website/static/src/css/algolia.css"/>
             </head>
             <body>
             <div class="row">
               <header >
                
                 <div class="col-md-4 col-md-offset-5">
-                   <input id="search-input" placeholder="Search for products"/>
+                   <!-- <input id="search-input" placeholder="Search for products"/> -->
                    <span t-esc="website.api_algolia" class="api_algolia hidden"/>
                    <span t-esc="website.client_id_algolia" class="client_id_algolia hidden"/>
                    <span t-esc="website.index_algolia" class="index_algolia hidden"/>
@@ -23,17 +23,31 @@
               </div>
               <div class="row">
               <main>
-                  <div id="hits"></div>
-                  <div id="pagination"></div>
+                    <div id="hits" style="left: -120px;display: none;"></div>
+                  <!-- <div id="pagination"></div> -->
               </main>
               </div>
             </body>
             <script type="text/javascript" src="/web/static/lib/jquery/jquery.js"></script>
             <script src="/algolia_website/static/src/js/instantsearch.min.js"/>
             <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
-            <script src="/algolia_website/static/src/js/algolia_engine10.js"/>
-        </t>
+            <script src="/algolia_website/static/src/js/algolia.js"/>
+            <script src="/algolia_website/static/src/js/serach-pup.js"/>
     </template>
-             
+      
+      
+    <template id="template_algolia" name="IP Main Layout" inherit_id="website.website_search_box">
+    
+            <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="after">
+            <div>
+                <t t-call="algolia_website.ip_algolia_page" />
+                </div>
+            </xpath>
+            <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="replace">
+                <input type="text" name="search" id="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
+            </xpath>
+            
+    </template>
+           
     </data>
 </openerp> 

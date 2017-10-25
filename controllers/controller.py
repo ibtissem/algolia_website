@@ -25,6 +25,7 @@ from odoo.addons.website_portal.controllers.main import website_account
 
 
 class ExtensionAlgolia(website_account):
+#     it the page of the algolia test 
     @http.route('/algolia', type='http', auth='public', website=True)
     def affichage_algolia(self,*args,**kw):
         cr, uid, context, pool = request.cr, request.uid, request.context, request.registry 

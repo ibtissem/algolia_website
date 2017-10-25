@@ -12,21 +12,21 @@ var search2 = instantsearch({
   indexName: $(".index_algolia").text(),
   urlSync: true
 });
- var hitTemplate2 = '<article class="hit">' + 
+ var hitTemplate2 = '<a href="{{url_produit}}"><article class="hit">' + 
       '<div class="product-desc-wrapper">' +
-      '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"> </div>' +
+      '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"></div>' +
         '<div class="product-name">{{{_highlightResult.name_product.value}}}</div>' + 
         '<div class="product-price">{{description_product}}</div>' + 
       '</div>' +
-  '</article>';
+  '</article> </a>';
 
-var hitTemplate = '<article class="hit">' + 
+var hitTemplate = '<a href="{{url_produit}}"><article class="hit">' + 
       '<div class="product-desc-wrapper">' +
-      '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"> </div>' +
+      '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"> </a></div>' +
         '<div class="product-name">{{{_highlightResult.name_product.value}}}</div>' + 
         '<div class="product-price">{{description_product}}</div>' + 
       '</div>' +
-  '</article>';
+  '</article> </a>';
   
 var noResultsTemplate =
   '<div class="text-center">Aucun résultat trouvé correspondant <strong>{{query}}</strong>.</div>';
@@ -47,8 +47,8 @@ search.addWidget(
 
 search.addWidget(
   instantsearch.widgets.hits({
-    container: '#hits',
-//     hitsPerPage: 10,
+    container: '#hits', 
+    hitsPerPage: 6, 
     templates: {
       empty: noResultsTemplate,
       item: hitTemplate
@@ -64,8 +64,8 @@ search2.addWidget(
 
 search2.addWidget(
   instantsearch.widgets.hits({
-    container: '#hits',
-//     hitsPerPage: 10,
+    container: '#hits', 
+    hitsPerPage: 6, 
     templates: {
       empty: noResultsTemplate,
       item: hitTemplate2

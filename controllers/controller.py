@@ -21,12 +21,12 @@
  
 from odoo import http
 from odoo.http import request
-from odoo.addons.website_portal.controllers.main import website_account
+# from odoo.addons.website_portal.controllers.main import website_account
 
 
-class ExtensionAlgolia(website_account):
-#     it the page of the algolia test 
-    @http.route('/algolia', type='http', auth='public', website=True)
-    def affichage_algolia(self,*args,**kw):
-        cr, uid, context, pool = request.cr, request.uid, request.context, request.registry 
-        return request.render('algolia_website.ip_algolia_page')
+# class ExtensionAlgolia(website_account):
+# #     it the page of the algolia test 
+#     @http.route('/algolia', type='http', auth='public', website=True)
+#     def affichage_algolia(self,*args,**kw):
+#         cr, uid, context, pool = request.cr, request.uid, request.context, request.registry 
+#         return request.render('algolia_website.ip_algolia_page')

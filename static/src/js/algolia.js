@@ -29,7 +29,7 @@ var hitTemplate = '<a href="{{url_produit}}"><article class="hit">' +
   '</article> </a>';
   
 var noResultsTemplate =
-  '<div class="text-center">Aucun résultat trouvé correspondant <strong>{{query}}</strong>.</div>';
+  '<div class="text-center">No result found <strong>{{query}}</strong>.</div>';
 
 var menuTemplate =
   '<a href="javascript:void(0);" class="facet-item {{#isRefined}}active{{/isRefined}}"><span class="facet-name"><i class="fa fa-angle-right"></i> {{name}}</span class="facet-name"></a>';

@@ -22,10 +22,10 @@
 {
     'name': 'Algolia connector website', 
     'icon': "algolia_website/static/description/algolia.png",  
-    'description': """
-    algolia website add the search interface algolia inder the search input
-    ====================================
-    """, 
+#     'description': """
+#     algolia website add the search interface algolia inder the search input
+#     ====================================
+#     """, 
     'category': 'tools',
     'version' : '8.0.1',
     'author' : 'IP : Ibtissem Zeiri',

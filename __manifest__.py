@@ -1,43 +1,22 @@
-#-*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014-2015 Incontinence Protection
-#   (Ali MRISSA) (http://www.incontinence-protection.com/).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+#-*- coding: utf-8 -*- 
+
 {
-    'name': 'Algolia connector website', 
+    'name': 'Algolia connector',
+    'version': '11.0',
     'icon': "algolia_website/static/description/algolia.png",  
-#     'description': """
-#     algolia website add the search interface algolia inder the search input
-#     ====================================
-#     """, 
-    'category': 'tools',
-    'version' : '8.0.1',
-    'author' : 'IP : Ibtissem Zeiri',
-    'category' : 'Tools',
-    'depends' : ['base','product','algolia_backend'],
-    'data':[
-        'views/algolia.xml', 
-#         'cron/cron.xml',
-        ],
+    'category': 'algolia_website',
+    'summary': 'Add algolia search interface ',
+    'version': '1.0',
+    'description': """
+        algolia connector engine:
+        add algolia's search interface inder the search input
+    """,
+    'author':  'Ibtissem Zeiri', 
+    'depends': ['base','product','algolia_backend'],
+    'data': [],
+    'qweb': ['static/src/xml/checkout.xml'],
     'installable': True,
-    'application': True,
     'auto_install': False,
-    'qweb': [],
-   
+    'application': False,
 }
+

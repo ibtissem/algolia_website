@@ -32,7 +32,7 @@
             <script src="/algolia_website/static/src/js/instantsearch.min.js"/>
             <script src="https://cdn.jsdelivr.net/jquery/1.11.3/jquery.min.js"></script>
             <script src="/algolia_website/static/src/js/algolia.js"/>
-            <script src="/algolia_website/static/src/js/serach-pup.js"/>
+            <script src="/algolia_website/static/src/js/search-pup-up.js"/>
     </template>
       
       

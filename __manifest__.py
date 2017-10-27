@@ -14,7 +14,7 @@
     'author':  'Ibtissem Zeiri', 
     'depends': ['base','product','algolia_backend'],
     'data': [],
-    'qweb': ['static/src/xml/checkout.xml'],
+    'qweb': ['static/src/xml/algolia.xml'],
     'installable': True,
     'auto_install': False,
     'application': False,

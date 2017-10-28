@@ -48,6 +48,24 @@
             </xpath>
             
     </template>
+    
+    <template id="fix_style_product" name="Header template fix" inherit_id="website_sale.product">
+    	<xpath expr='//div[@class="col-sm-4"]' position="replace">
+           	<div class="col-sm-4" style="margin-top: 12px;">
+               <ol class="breadcrumb">
+	               <li>
+	                   <a t-att-href="keep(category=0)">Products</a>
+	               </li>
+	               <li t-if="category">
+                       <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)" t-field="category.name" />
+                   </li>
+                   <li class="active">
+                       <span t-field="product.name" />
+                   </li>
+               /ol>
+            </div>
+        </xpath>
+    </template>
            
     </data>
 </openerp> 

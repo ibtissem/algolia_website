@@ -14,7 +14,7 @@ var search2 = instantsearch({
 });
  var hitTemplate2 = '<a href="{{url_produit}}"><article class="hit">' + 
       '<div class="product-desc-wrapper">' +
-      '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"></div>' +
+      '<div class="hit-image"><img src="/web/image/product.template/{{id_odoo}}/image" alt="{{name_product}}"></div>' +
         '<div class="product-name">{{{_highlightResult.name_product.value}}}</div>' + 
         '<div class="product-price">{{description_product}}</div>' + 
       '</div>' +
@@ -22,7 +22,7 @@ var search2 = instantsearch({
 
 var hitTemplate = '<a href="{{url_produit}}"><article class="hit">' + 
       '<div class="product-desc-wrapper">' +
-      '<div class="hit-image"><img src="data:image/png;base64,{{image_product}}" alt="{{name_product}}"> </a></div>' +
+      '<div class="hit-image"><img src="/web/image/product.template/{{id_odoo}}/image" alt="{{name_product}}"> </a></div>' +
         '<div class="product-name">{{{_highlightResult.name_product.value}}}</div>' + 
         '<div class="product-price">{{description_product}}</div>' + 
       '</div>' +

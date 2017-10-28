@@ -1,5 +1,4 @@
 #-*- coding: utf-8 -*- 
-
 {
     'name': 'Algolia connector',
     'version': '11.0',
@@ -10,11 +9,14 @@
     'description': """
         algolia connector engine:
         add algolia's search interface inder the search input
+        ======
     """,
     'author':  'Ibtissem Zeiri', 
     'depends': ['base','product','algolia_backend'],
-    'data': [],
-    'qweb': ['static/src/xml/algolia.xml'],
+    'data': [
+        'views/algolia.xml',
+        ],
+    'qweb': [],
     'installable': True,
     'auto_install': False,
     'application': False,

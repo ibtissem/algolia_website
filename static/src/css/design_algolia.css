@@ -226,16 +226,6 @@ aside {
   padding-right: 10px;
   font-size: .8em; }
 
-#hits {
-  margin: 0 -.5%; 
-  width: 260%;
-position: absolute;
-background-color: #eeece9;
-left: 609px;
-z-index: 999999999;
-border-radius: 10px;
-border-color: gray;
-display : none;}
   #hits:after {
     content: "";
     display: table;
@@ -253,7 +243,7 @@ width:60px;
 }
 #hits{
 border:1px solid #eee;
-width: 200%;
+width: 260%;
 position: absolute;
 background-color: #eeece9;
 left: 609px;

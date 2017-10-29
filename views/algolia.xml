@@ -5,7 +5,7 @@
         <template id="ip_algolia_page" name="Test page">
             <head>
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css"/>
-              <link rel="stylesheet" type="text/css" href="/algolia_website/static/src/css/algolias.css"/>
+              <link rel="stylesheet" type="text/css" href="/algolia_website/static/src/css/design_algolia.css"/>
             </head>
             <body>
             <div class="row">

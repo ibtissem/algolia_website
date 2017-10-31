@@ -5,7 +5,7 @@
         <template id="ip_algolia_page" name="Test page">
             <head>
               <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css"/>
-              <link rel="stylesheet" type="text/css" href="/algolia_website/static/src/css/design_algolia.css"/>
+              <link rel="stylesheet" type="text/css" href="/algolia_website/static/src/css/design.css"/>
             </head>
             <body>
             <div class="row">
@@ -35,37 +35,19 @@
             <script src="/algolia_website/static/src/js/search-pup-up.js"/>
     </template>
       
-      
     <template id="template_algolia" name="IP Main Layout" inherit_id="website.website_search_box">
-    
             <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="after">
-            <div>
                 <t t-call="algolia_website.ip_algolia_page" />
-                </div>
             </xpath>
             <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="replace">
                 <input type="text" name="search" id="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
             </xpath>
-            
+            <div class="oe_search" position="replace">
+		        <div class="oe_search" style="margin-top: 0px;">
+		            <input type="text" name="search" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
+		        </div>
+	    	</div>
     </template>
     
-    <template id="fix_style_product" name="Header template fix" inherit_id="website_sale.product">
-    	<xpath expr='//div[@class="col-sm-4"]' position="replace">
-           	<div class="col-sm-4" style="margin-top: 12px;">
-               <ol class="breadcrumb">
-	               <li>
-	                   <a t-att-href="keep(category=0)">Products</a>
-	               </li>
-	               <li t-if="category">
-                       <a t-att-href="keep('/shop/category/%s' % slug(category), category=0)" t-field="category.name" />
-                   </li>
-                   <li class="active">
-                       <span t-field="product.name" />
-                   </li>
-               </ol>
-            </div>
-        </xpath>
-    </template>
-           
     </data>
 </openerp> 

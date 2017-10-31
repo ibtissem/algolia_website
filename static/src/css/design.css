@@ -1,5 +1,9 @@
 body {
   font-family: Verdana, sans-serif; }
+  .products_pager .pagination {
+    margin: 5px auto !important;
+    margin-top: -4px;
+  }
 
 a {
   color: #0063C3;

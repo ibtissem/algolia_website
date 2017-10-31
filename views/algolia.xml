@@ -39,12 +39,9 @@
             <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="after">
                 <t t-call="algolia_website.ip_algolia_page" />
             </xpath>
-            <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="replace">
-                <input type="text" name="search" id="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
-            </xpath>
             <div class="oe_search" position="replace">
 		        <div class="oe_search" style="margin-top: 0px;">
-		            <input type="text" name="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
+		            <input type="text" name="search" id="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
 		        </div>
 	    	</div>
     </template>

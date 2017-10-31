@@ -36,13 +36,11 @@
     </template>
       
     <template id="template_algolia" name="IP Main Layout" inherit_id="website.website_search_box">
-            <xpath expr='//input[@class="search-query form-control oe_search_box"]' position="after">
-                <t t-call="algolia_website.ip_algolia_page" />
-            </xpath>
-            <div class="oe_search" position="replace">
+       <div class="oe_search" position="replace">
 		        <div class="oe_search" style="margin-top: 0px;">
 		            <input type="text" name="search" id="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
 		        </div>
+		        <t t-call="algolia_website.ip_algolia_page" />
 	    	</div>
     </template>
     

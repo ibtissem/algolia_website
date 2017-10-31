@@ -44,7 +44,7 @@
             </xpath>
             <div class="oe_search" position="replace">
 		        <div class="oe_search" style="margin-top: 0px;">
-		            <input type="text" name="search" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
+		            <input type="text" name="search-input" class="search-query form-control oe_search_box" placeholder="Search..." t-att-value="search" />
 		        </div>
 	    	</div>
     </template>
